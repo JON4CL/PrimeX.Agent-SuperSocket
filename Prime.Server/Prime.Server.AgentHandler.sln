@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prime.Server.AgentHandler", "Prime.Server.AgentHandler\Prime.Server.AgentHandler.csproj", "{A97DB079-5CEE-4F8A-A0DC-E3F7DCEEA3C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A97DB079-5CEE-4F8A-A0DC-E3F7DCEEA3C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A97DB079-5CEE-4F8A-A0DC-E3F7DCEEA3C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A97DB079-5CEE-4F8A-A0DC-E3F7DCEEA3C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A97DB079-5CEE-4F8A-A0DC-E3F7DCEEA3C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB30513B-B848-4FB7-A2CA-7DF5F4CDF52D}
+	EndGlobalSection
+EndGlobal

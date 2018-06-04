@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{05B256C1-AFCA-4D6A-9630-742A4508A694}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Prime.Agent</RootNamespace>
+    <AssemblyName>Prime.Agent</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PrimeAgent.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Prime.Agent.Components\ComponentManager\Prime.Agent.Component.csproj">
+      <Project>{53A6BA9B-C84D-4BDE-BAE0-C9C5499BC2BC}</Project>
+      <Name>Prime.Agent.Component</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Prime.Agent.Networking\Prime.Agent.Networking.csproj">
+      <Project>{3c0f9884-7a6f-450c-b1e3-cd7967b89fb2}</Project>
+      <Name>Prime.Agent.Networking</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Prime.Base.MachineInfo\Prime.Base.MachineInfo.csproj">
+      <Project>{A135C9F5-6621-4934-B9B4-D103CF7DEFFF}</Project>
+      <Name>Prime.Base.MachineInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Prime.Base.Networking\Prime.Base.Networking.csproj">
+      <Project>{DCD018B6-AD55-4C3D-AB8D-51C3A012A845}</Project>
+      <Name>Prime.Base.Networking</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Prime.Base\Prime.Base.ConfigurationContainer\Prime.Base.ConfigurationContainer.csproj">
+      <Project>{42eb4c29-deab-4b0c-8877-7fd2b9f4349f}</Project>
+      <Name>Prime.Base.ConfigurationContainer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Prime.Base\Prime.Base.Log\PrimeX.Base.csproj">
+      <Project>{f41d4e58-5b73-4c6b-b39c-fa567a6d7faf}</Project>
+      <Name>PrimeX.Base</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /Y *.* G:\PrimeAgent</PostBuildEvent>
+  </PropertyGroup>
+</Project>
